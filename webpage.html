@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Webpage Bootsrap</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <style type="text/css">
     .top {
@@ -12,6 +14,11 @@
     .header{
       padding-left: 20px; 
     }
+      .image-container img{
+          width:100%;
+          margin-bottom: 10px
+      }
+      .image-container p{font-size: 20px;font-weight: 300; text-align: center;margin-top: 10px;margin-bottom: 10px}
      @media only screen and (max-width: 959px) {
       section{
         width: 100%;
@@ -78,26 +85,34 @@
               <img class="itm1" src="Resources/main.jpeg" height="360px" width="960px">
             </div>
             <div style="margin-top: 3%; background-color:darkgrey; margin-left:2%; margin-right: 2%;color:white">        
-                        <p>Hii this is a demo page. I am still workking on it to make your experience wonderful</p>       
+                        <p>Hii this is a demo page. I am still working on it to make your experience wonderful</p>       
               </div>
               <div class="d-flex justify-content-left">
                 <h1 style="color: gray; margin-left:3%; margin-right: 6%; margin-top: 4%; margin-bottom: 0%; font-family: Gotham">Latest photos</h1>
                 <hr>   
               </div>
-              <div class="row" style="margin-bottom: 10px;margin-left: 2%">
+              <div class="row image-container" style="margin-bottom: 10px;">
                 <div class="col-md-3">
-                  <img src="Resources/img1.jpeg"  style="width:215px; height:315px; padding: 5px;">
+                  <img src="Resources/img1.jpeg" >
+                    <p>Image1</p>
                 </div>
                 <div class="col-md-3">
-                  <img src="Resources/img2.jpeg"  style="width:215px; height:315px; padding: 5px;">
+                  <img src="Resources/img2.jpeg" >
+                 <p>Image2</p>
+
                 </div>
                 <div class="col-md-3">
-                  <img src="Resources/img3.jpeg"  style="width:215px; height:315px; padding: 5px;">
+                  <img src="Resources/img3.jpeg" >
+                     <p>Image3</p>
+
                 </div>
                 <div class="col-md-3">
-                  <img src="Resources/img4.jpeg"  style="width:215px; height:315px; padding: 5px;">
+                  <img src="Resources/img4.jpeg" >
+                    <p>Image4</p>
+
                 </div>
               </div>
+<!--
               <div class="row d-flex justify-content-center" style="margin-bottom: 10px; text-align: center;">
                 <div class="col-md-3">
                   <label>Image1</label>
@@ -112,6 +127,7 @@
                   <label>Image1</label>
                 </div>
               </div>
+-->
           </div>
         </div>
       </div>
