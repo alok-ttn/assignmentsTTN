@@ -1,0 +1,195 @@
+﻿const arr1 = [
+
+
+      {
+
+
+        productId: 321,
+
+
+        barcodeId: 321,
+
+
+        productName: 'Black grapes',
+
+
+        volume: 1.0,
+
+
+        price: 3.0,
+
+
+        barcoded: null,
+
+
+        primaryCategory: {
+
+
+          categoryId: 1,
+
+
+          categoryName: 'fruits',
+
+
+        },
+
+
+      },
+
+
+      {
+
+
+        productId: 456,
+
+
+        barcodeId: 456,
+
+
+        productName: 'Grapes',
+
+
+        volume: 3.0,
+
+
+        price: 150.0,
+
+
+        barcoded: null,
+
+
+        primaryCategory: {
+
+
+          categoryId: 1,
+
+
+          categoryName: 'fruits',
+
+
+        },
+
+
+      },
+
+
+    ];
+
+
+
+
+arr1.forEach((value,index)=>{
+  arr1[index].categoryId=value.primaryCategory.categoryId;
+    arr1[index].categoryName=value.primaryCategory.categoryName;
+
+
+});
+var arr2=arr1.map((copy)=>{
+  return copy
+});
+
+
+arr2.forEach((value,index)=>{
+  delete value.primaryCategory;
+});
+             
+console.log(arr2)
+
+
+
+
+
+
+
+
+//program 2
+
+
+const arr1 = [
+
+
+      {
+
+
+        productId: 321,
+
+
+        barcodeId: 321,
+
+
+        productName: 'Black grapes',
+
+
+        volume: 1.0,
+
+
+        price: 3.0,
+
+
+        barcoded: null,
+
+
+        primaryCategory: {
+
+
+          categoryId: 1,
+
+
+          categoryName: 'fruits',
+
+
+        },
+
+
+      },
+
+
+      {
+
+
+        productId: 456,
+
+
+        barcodeId: 456,
+
+
+        productName: 'Grapes',
+
+
+        volume: 3.0,
+
+
+        price: 150.0,
+
+
+        barcoded: null,
+
+
+        primaryCategory: {
+
+
+          categoryId: 1,
+
+
+          categoryName: 'fruits',
+
+
+        },
+
+
+      },
+
+
+    ];
+ function flattenObj(obj, parent, res = {}){
+    for(let key in obj){
+        let propName = parent ? parent + '_' + key : key;
+        if(typeof obj[key] == 'object'){
+            flattenObj(obj[key], propName, res);
+        } else {
+            res[propName] = obj[key];
+        }
+    }
+    return res;
+}
+console.log(flattenObj(arr1))
